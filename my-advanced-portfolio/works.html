@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 獭</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="fade">
+    <header class="main-header">
+        <nav class="language-switcher">
+            <button data-lang="zh">中文</button>
+            <button data-lang="ja">日本語</button>
+            <button data-lang="en">English</button>
+        </nav>
+        <h1 class="main-title" data-i18n="works.title">我的作品集</h1>
+    </header>
+    <main class="works-container">
+        <aside class="works-sidebar">
+            <ul class="works-types">
+                <li data-type="animation" class="active" data-i18n="works.animation">动画</li>
+                <li data-type="photography" data-i18n="works.photography">摄影</li>
+                <li data-type="painting" data-i18n="works.painting">绘画</li>
+            </ul>
+        </aside>
+        <section class="works-content">
+            <div class="works-page animation">
+                <h2 data-i18n="works.animation">动画作品</h2>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/demo1.mp4" type="video/mp4">
+                    </video>
+                    <p class="description">这是第一个动画作品的视频介绍。</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="videos/demo2.mp4" type="video/mp4">
+                    </video>
+                    <p class="description">这是第二个动画作品的视频介绍。</p>
+                </div>
+            </div>
+            <div class="works-page photography hidden">
+                <h2 data-i18n="works.photography">摄影作品</h2>
+                <p class="description">这里将展示摄影作品。</p>
+            </div>
+            <div class="works-page painting hidden">
+                <h2 data-i18n="works.painting">绘画作品</h2>
+                <p class="description">这里将展示绘画作品。</p>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>© 2024 <span data-i18n="footer.name">獭</span>.不保留所有权利.</p>
+    </footer>
+    <script src="assets/js/languages.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

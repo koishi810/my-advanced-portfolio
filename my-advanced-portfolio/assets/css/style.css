@@ -1,0 +1,185 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    min-height: 100vh; /* 占满视口高度 */
+}
+
+/* 动画效果 */
+.fade {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 标题与副标题 */
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main-subtitle {
+    font-size: 1.5rem;
+    color: #aaa;
+}
+
+/* 语言切换 */
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.language-switcher button {
+    background: none;
+    color: #fff;
+    border: none; /* 去掉边框 */
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.language-switcher button:hover {
+    color: #aaa;
+}
+
+/* 头像与描述 */
+.profile-avatar {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 3px solid #fff;
+}
+
+.profile-description {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* 链接列表 */
+.profile-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-links li {
+    margin: 10px 0;
+}
+
+.profile-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #aaa;
+    transition: all 0.3s ease;
+}
+
+.profile-links a:hover {
+    color: #fff;
+    transform: scale(1.1); /* 悬停放大 */
+}
+
+/* 页脚 */
+.main-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    background-color: #111;
+    width: 100%;
+}
+
+/* 作品集布局 */
+.works-container {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+}
+
+.works-sidebar {
+    position: fixed; /* 固定侧边栏 */
+    left: 0; /* 左对齐 */
+    top: 150px; /* 与顶部标题保持一定距离 */
+    width: 200px; /* 宽度 200px */
+    padding: 20px 10px; /* 内边距 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    height: calc(100vh - 150px); /* 高度适应视口 */
+    overflow-y: auto; /* 如果内容溢出，添加滚动条 */
+}
+
+.works-types {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.works-types li {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.works-types li:hover,
+.works-types li.active {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* 内容区域 */
+.works-content {
+    margin-left: 220px; /* 为侧边栏留出空间 */
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* 内容滚动支持 */
+    max-height: calc(100vh - 150px);
+}
+
+.works-page {
+    display: none;
+}
+
+.works-page:not(.hidden) {
+    display: block;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ddd;
+}
